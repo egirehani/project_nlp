@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+        <title>Aplikasi Sistem Deteksi Emosi Teks Bahasa Indonesia</title>
+    </head>
+    <body>
+        <section class="flex justify-center items-center w-screen h-screen bg-indigo-500">
+            <main class="flex flex-col justify-center items-center p-9 bg-white rounded-lg">
+                <h1 class="text-xl font-bold">Sistem Deteksi Emosi</h1>
+                <h1 class="text-xl font-bold">Teks Bahasa Indonesia</h1>
+                
+                <form action="/" method="POST" class="flex flex-col" enctype="multipart/form-data">
+                    <label for="Text" class="mb-2 mt-6">Teks:</label>
+                    <textarea type="textarea" name="Text" placeholder="Masukkan Teks" 
+                    required="required" class="rezise-none p-4 bg-gray-100 rounded-md"></textarea>
+                    <button id="btnsubmit" type="submit" class="p-2 bg-indigo-500 text-white rounded-lg mt-4 font-semibold">Prediksi Emosi Teks</button>    
+                </form>
+
+                {% if prediction_text is defined%}
+                <label for="Hasil Prediksi:" class="mt-4 mb-2">Hasil Deteksi Emosi:</label>
+                <label for="Hasil Prediksi:" class="mb-2 font-bold">{{prediction_text}}</label>
+                {% endif %}
+            </main>
+        </section>
+    </body>
+    <div class="copyright text-center">
+        <p class="cr">Copyright 2022 - Tim Penelitian Hibah KBK NLP <br> FMIPA Universitas Negeri Malang tahun 2022</p>
+    </div>
+</html>
