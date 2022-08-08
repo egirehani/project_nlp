@@ -1,0 +1,13 @@
+flask
+tensorflow-cpu
+pillow
+pandas
+sklearn
+spacy
+nltk
+numpy
+jinja2
+gunicorn
+itsdangerous
+MarkupSafe
+Werkzeug
